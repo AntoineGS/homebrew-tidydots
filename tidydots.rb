@@ -5,23 +5,23 @@
 class Tidydots < Formula
   desc "Cross-platform dotfile management tool"
   homepage "https://github.com/AntoineGS/tidydots"
-  version "0.1"
+  version "0.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/AntoineGS/tidydots/releases/download/v0.1/tidydots_0.1_darwin_amd64.tar.gz"
-      sha256 "e0324a6edfc0f7e7c2e9e0f9a3bcbdf5922dbbd5803cf0546cb787d879b19690"
+      url "https://github.com/AntoineGS/tidydots/releases/download/v0.2/tidydots_0.2_darwin_amd64.tar.gz"
+      sha256 "e6aad575fdfeb3e62dc38bbc3ba6526bf2f8bd05a288d7670c0b96be452f1331"
 
-      def install
+      define_method(:install) do
         bin.install "tidydots"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/AntoineGS/tidydots/releases/download/v0.1/tidydots_0.1_darwin_arm64.tar.gz"
-      sha256 "1db08dd2d8a2a82e93434239f15133e8481823bf2d9707b6612f8470274c5df7"
+      url "https://github.com/AntoineGS/tidydots/releases/download/v0.2/tidydots_0.2_darwin_arm64.tar.gz"
+      sha256 "7db47ee2a61364abd279317adb4745da14d7f5c81b4a0509dbf9a22812a9dc56"
 
-      def install
+      define_method(:install) do
         bin.install "tidydots"
       end
     end
@@ -29,16 +29,16 @@ class Tidydots < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/AntoineGS/tidydots/releases/download/v0.1/tidydots_0.1_linux_amd64.tar.gz"
-      sha256 "6a18af45e327ebe95a86bf6d16db13f04f0e0855131ab027e70c4c4a9ab9d48c"
-      def install
+      url "https://github.com/AntoineGS/tidydots/releases/download/v0.2/tidydots_0.2_linux_amd64.tar.gz"
+      sha256 "a32d6c84eb1d5ac36f86dc385957bc10492553c774731151a9acd8a3423f2063"
+      define_method(:install) do
         bin.install "tidydots"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/AntoineGS/tidydots/releases/download/v0.1/tidydots_0.1_linux_arm64.tar.gz"
-      sha256 "b83c182a77a8a8c76f65e135fecde1acfca6aebe92c80efd8720b94f28e4e3a6"
-      def install
+      url "https://github.com/AntoineGS/tidydots/releases/download/v0.2/tidydots_0.2_linux_arm64.tar.gz"
+      sha256 "647a4d5b61a7c21cede5c8a06320a12ad878be840344b3d85ba39f7cc8d21352"
+      define_method(:install) do
         bin.install "tidydots"
       end
     end
